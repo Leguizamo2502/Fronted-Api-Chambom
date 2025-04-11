@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/bootstrap-5.3.5-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./styles/Nav.css">
+    <title>FormModule</title>
+</head>
+
+<body>
+
+    <div id="nav"></div>
+
+    <h1>FormModule</h1>
+    <!-- Formualrio para crear -->
+    <div class="c col-md-5">
+        <form class="row g-3" id="registerFormModule">
+            <h4>Crear FormModule</h4>
+            <div class="col-md-6">
+                <label for="formId" class="form-label">Formulario</label>
+                <select class="form-select" id="formId" required></select>
+            </div>
+            <div class="col-md-6">
+                <label for="moduleId" class="form-label">Módulo</label>
+                <select class="form-select" id="moduleId" required></select>
+            </div>
+            
+
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Subir</button>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- Lista de FormModules -->
+    <h4>Lista de FormModules</h4>
+    <div class="container mt-4">
+
+        <table class="table" id="tablaFormModule">
+            <thead>
+                <tr>
+                    <th>Num</th>
+                    <th>FormId</th>
+                    <th>ModuleId</th>
+                    <th>Form Nombre</th>
+                    <th>Module Nombre</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal y formualrio de actualizar -->
+
+    <div class="modal fade" id="Actualizar" tabindex="-1" aria-labelledby="ActualizarLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="ActualizarLabel">Actualizar FormModule</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="ActualizarFormModule">
+                        <input type="hidden" id="FormModuleId">
+                        <div class="mb-3">
+                            <label for="formIdUpdate" class="form-label">Formulario</label>
+                            <select class="form-select" id="formIdUpdate" required></select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="moduleIdUpdate" class="form-label">Módulo</label>
+                            <select class="form-select" id="moduleIdUpdate" required></select>
+                        </div>
+                        
+
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./scripts/formModule.js"></script>
+    <script src="./assets/bootstrap-5.3.5-dist/js/bootstrap.js"></script>
+    <script src="./scripts/nav.js"></script>
+</body>
+
+</html>

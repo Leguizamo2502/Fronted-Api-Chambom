@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/bootstrap-5.3.5-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./styles/Nav.css">
+    <title>User</title>
+</head>
+
+<body>
+
+    <div id="nav"></div>
+
+    <h1>User</h1>
+    <!-- Formualrio para crear -->
+    <div class="c col-md-5">
+        <form class="row g-3" id="registerUser">
+            <h4>Crear Usuario</h4>
+            <div class="col-md-6">
+                <label for="name" class="form-label">UserName</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="col-md-6">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" required>
+            </div>
+
+            <div class="col-md-6">
+                <label for="personId" class="form-label">Persona</label>
+                <select class="form-select" id="personId"  required>
+                    <option value="">Seleccione una Persona</option>
+                </select>
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Subir</button>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- Lista de Usuarios -->
+    <h4>Lista de Usuarios</h4>
+    <div class="container mt-4">
+
+        <table class="table" id="tablaUser">
+            <thead>
+                <tr>
+                    <th>Num</th>
+                    <th>UserNombre</th>
+                    <th>Contraseña</th>
+                    <th>Nombre Persona</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal y formualrio de actualizar -->
+
+    <div class="modal fade" id="Actualizar" tabindex="-1" aria-labelledby="ActualizarLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="ActualizarLabel">Actualizar Usuario</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="ActualizarUser">
+                        <input type="hidden" id="UserId">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">UserName</label>
+                            <input type="text" class="form-control" id="usernameUpdate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="text" class="form-control" id="passwordUpdate" required>
+                        </div>
+
+                        
+                        <div class="mb-3">
+                            <label for="personIdUpdate" class="form-label">Persona</label>
+                            <select class="form-select" id="personIdUpdate" required></select>
+                        </div>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./scripts/user.js"></script>
+    <script src="./assets/bootstrap-5.3.5-dist/js/bootstrap.js"></script>
+    <script src="./scripts/nav.js"></script>
+</body>
+
+</html>

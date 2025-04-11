@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/bootstrap-5.3.5-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="./styles/Nav.css">
+  <title>Person</title>
+</head>
+
+<body>
+  <div id="nav"></div>
+
+  <h1>Person</h1>
+  <div class="c col-md-6">
+    <form class="row g-3" id="registerPerson">
+      <h4>Crear Persona</h4>
+      <div class="col-md-6">
+        <label for="name" class="form-label">FirstName</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+      <div class="col-md-6">
+        <label for="lastName" class="form-label">LastName</label>
+        <input type="text" class="form-control" id="lastName" required>
+      </div>
+
+      <div class="col-md-12">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+      <div class="col-6">
+        <label for="typeDocument" class="form-label">Tipo Documento</label>
+        <select id="typeDocument" class="form-select">
+          <option selected>...</option>
+          <option value="CC">Cc</option>
+          <option value="TI">Ti</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="numberDocument" class="form-label">Numero de Documento</label>
+        <input type="number" class="form-control" id="numberDocument">
+      </div>
+      <div class="col-md-6">
+        <label for="phone" class="form-label">Telefono</label>
+        <input type="number" class="form-control" id="phone" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">Direccion</label>
+        <input type="text" class="form-control" id="address" required>
+      </div>
+      <div class="col-6">
+        <label for="bloodType" class="form-label">Tipo de Sangre</label>
+        <select id="bloodType" class="form-select">
+          <option selected>...</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+        </select>
+      </div>
+      
+      
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Subir</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Lista de Personas -->
+  <h4 class="c">Lista de Personas</h4>
+  <div class="container mt-4">
+
+      <table class="table" id="tablaPerson">
+          <thead>
+              <tr>
+                  <th>Num</th>
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th>Email</th>
+                  <th>Tipo Documento</th>
+                  <th>Numero Documento</th>
+                  <th>Telefono</th>
+                  <th>Direccion</th>
+                  <th>Tipo Sangre</th>
+              </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+      </table>
+  </div>
+
+  <!-- Actualizar -->
+
+  <div class="modal fade" id="Actualizar" tabindex="-1" aria-labelledby="ActualizarLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="ActualizarLabel">Actualizar Rol</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                
+                <form class="row g-3" id="ActualizarPerson">
+                  <h4>Crear Persona</h4>
+                  <input type="hidden" id="personId">
+                  <div class="col-md-6">
+                    <label for="name" class="form-label">FirstName</label>
+                    <input type="text" class="form-control" id="nameUpdate" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="lastName" class="form-label">LastName</label>
+                    <input type="text" class="form-control" id="lastNameUpdate" required>
+                  </div>
+            
+                  <div class="col-md-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="emailUpdate" required>
+                  </div>
+                  <div class="col-6">
+                    <label for="typeDocument" class="form-label">Tipo Documento</label>
+                    <select id="typeDocumentUpdate" class="form-select">
+                      <option selected>...</option>
+                      <option value="CC">Cc</option>
+                      <option value="TI">Ti</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="numberDocument" class="form-label">Numero de Documento</label>
+                    <input type="number" class="form-control" id="numberDocumentUpdate" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="phone" class="form-label">Telefono</label>
+                    <input type="number" class="form-control" id="phoneUpdate" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputCity" class="form-label">Direccion</label>
+                    <input type="text" class="form-control" id="addressUpdate" required>
+                  </div>
+                  <div class="col-6">
+                    <label for="bloodType" class="form-label">Tipo de Sangre</label>
+                    <select id="bloodTypeUpdate" class="form-select">
+                      <option selected>...</option>
+                      <option value="O+">O+</option>
+                      <option value="O-">O-</option>
+                      <option value="A+">A+</option>
+                      <option value="A-">A-</option>
+                      <option value="B+">B+</option>
+                      <option value="B-">B-</option>
+                      <option value="AB+">AB+</option>
+                      <option value="AB-">AB-</option>
+                    </select>
+                  </div>
+                  
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+  <script src="./scripts/person.js"></script>
+  <script src="./assets/bootstrap-5.3.5-dist/js/bootstrap.js"></script>
+  <script src="./scripts/nav.js"></script>
+</body>
+
+</html>

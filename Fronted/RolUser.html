@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/bootstrap-5.3.5-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./styles/Nav.css">
+    <title>RolUser</title>
+</head>
+
+<body>
+
+    <div id="nav"></div>
+
+    <h1>RolUser</h1>
+    <!-- Formualrio para crear -->
+    <div class="c col-md-5">
+        <form class="row g-3" id="registerRolUser">
+            <h4>Crear RolUser</h4>
+            <div class="col-md-6">
+                <label for="rolId" class="form-label">Rol</label>
+                <select class="form-select" id="rolId" required>
+                    <option value="">Seleccione un rol</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="userId" class="form-label">Usuario</label>
+                <select class="form-select" id="userId" required>
+                    <option value="">Seleccione un usuario</option>
+                </select>
+            </div>
+            
+
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Subir</button>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- Lista de RolUsers -->
+    <h4>Lista de RolUsers</h4>
+    <div class="container mt-4">
+
+        <table class="table" id="tablaRolUser">
+            <thead>
+                <tr>
+                    <th>Num</th>
+                    <th>RolId</th>
+                    <th>UserId</th>
+                    <th>Rol Nombre</th>
+                    <th>User Nombre</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal y formualrio de actualizar -->
+
+    <div class="modal fade" id="Actualizar" tabindex="-1" aria-labelledby="ActualizarLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="ActualizarLabel">Actualizar RolUser</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="ActualizarRolUser">
+                        <input type="hidden" id="RolUserId">
+                        <div class="mb-3">
+                            <label for="rolIdUpdate" class="form-label">Roles</label>
+                            <select class="form-select" id="rolIdUpdate" required></select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="userIdUpdate" class="form-label">Usuarios</label>
+                            <select class="form-select" id="userIdUpdate" required></select>
+                        </div>
+                        
+
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./scripts/rolUser.js"></script>
+    <script src="./assets/bootstrap-5.3.5-dist/js/bootstrap.js"></script>
+    <script src="./scripts/nav.js"></script>
+</body>
+
+</html>

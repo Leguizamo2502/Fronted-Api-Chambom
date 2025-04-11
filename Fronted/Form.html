@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/bootstrap-5.3.5-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./styles/Nav.css">
+    <title>Form</title>
+</head>
+
+<body>
+
+    <div id="nav"></div>
+
+    <h1>Form</h1>
+    <!-- Formualrio para crear -->
+    <div class="c col-md-5">
+        <form class="row g-3" id="registerForm">
+            <h4>Crear Formulario</h4>
+            <div class="col-md-6">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="col-md-6">
+                <label for="description" class="form-label">Descripcion</label>
+                <input type="text" class="form-control" id="description" required>
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Subir</button>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- Lista de Formularios -->
+    <h4>Lista de Formularios</h4>
+    <div class="container mt-4">
+
+        <table class="table" id="tablaForm">
+            <thead>
+                <tr>
+                    <th>Num</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal y formualrio de actualizar -->
+
+    <div class="modal fade" id="Actualizar" tabindex="-1" aria-labelledby="ActualizarLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="ActualizarLabel">Actualizar Formulario</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formActualizarForm">
+                        <input type="hidden" id="FormId">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nameUpdate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Descripción</label>
+                            <input type="text" class="form-control" id="descriptionUpdate" required>
+                        </div>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./scripts/form.js"></script>
+    <script src="./assets/bootstrap-5.3.5-dist/js/bootstrap.js"></script>
+    <script src="./scripts/nav.js"></script>
+</body>
+
+</html>
